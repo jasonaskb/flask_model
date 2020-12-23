@@ -9,7 +9,7 @@ env:
     - IMAGE_NAME=flask
 
 before_install:
-  - docker image build -t "$DOCKERUSER"/"$IMAGE_NAME":v1.0 .
+  - docker image build -t "\$DOCKERUSER"/"$IMAGE_NAME":v1.0 .
 
 before_deploy:
   - docker login --username "$DOCKERUSER" --password "$DOCKERPWD"
